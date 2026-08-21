@@ -7,7 +7,7 @@ hosted by Orchard.
 
 | | |
 |---|---|
-| Event | Friday, October 16, 2026 · 7:00 PM |
+| Event | Friday, October 16, 2026 · 6:00 PM |
 | Venue | Ruggles Black — 2245 W Alabama St, Houston, TX 77098 |
 | Site | https://rugglesblack.com |
 
