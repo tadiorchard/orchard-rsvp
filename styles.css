@@ -9,6 +9,8 @@
   --gold:#C9A961;
   --gold-soft:#E0C88B;
   --blue:#2A95DD;
+  --brand-blue-1:#1A82CD;
+  --brand-blue-2:#0C5289;
   --line:rgba(246,241,232,.14);
   --maxw:1140px;
   --ease:cubic-bezier(.22,.8,.28,1);
@@ -281,7 +283,7 @@ img{max-width:100%;display:block}
 }
 .form-card__ribbon{
   position:absolute;top:0;left:0;right:0;height:2px;
-  background:linear-gradient(90deg,transparent,var(--gold),var(--blue),var(--gold),transparent);
+  background:linear-gradient(90deg,transparent,var(--gold),var(--brand-blue-1),var(--gold),transparent);
   background-size:200% 100%;
   animation:shimmer 7s linear infinite;
 }
@@ -411,4 +413,55 @@ img{max-width:100%;display:block}
 .captcha .g-recaptcha{transform-origin:center}
 @media (max-width:360px){
   .captcha .g-recaptcha{transform:scale(.88)}
+}
+
+/* ───────────  Orchard brand  ───────────
+   The lockup is navy-on-transparent, made for light backgrounds. On this
+   near-black page it would all but disappear, so it is reversed to a soft
+   cream — the standard treatment for a brand mark on a dark ground. The
+   brand blue still appears at full strength on the form ribbon and the
+   footer rule, so the palette stays Orchard's without hurting legibility. */
+
+.brandbar{
+  position:absolute;z-index:3;
+  top:clamp(1.5rem,3.5vw,2.4rem);left:50%;
+  transform:translateX(-50%);
+  display:block;line-height:0;
+  opacity:0;
+  animation:brandIn 1.2s var(--ease) .25s forwards;
+}
+.brandbar img{
+  width:clamp(112px,13vw,148px);height:auto;
+  /* reverse navy → cream for the dark ground */
+  filter:brightness(0) invert(1);
+  opacity:.9;
+  transition:opacity .4s var(--ease);
+}
+.brandbar:hover img{opacity:1}
+@keyframes brandIn{to{opacity:1}}
+
+.footer{position:relative}
+/* one full-strength brand-blue moment */
+.footer::before{
+  content:"";position:absolute;top:-1px;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--brand-blue-1),var(--brand-blue-2),var(--brand-blue-1),transparent);
+  opacity:.85;
+}
+.footer__logo{display:inline-block;line-height:0;margin-bottom:1.1rem}
+.footer__logo img{
+  width:132px;height:auto;
+  filter:brightness(0) invert(1);
+  opacity:.72;
+  transition:opacity .4s var(--ease);
+}
+.footer__logo:hover img{opacity:.95}
+
+@media (prefers-reduced-motion:reduce){
+  .brandbar{opacity:1;animation:none}
+}
+
+/* Keep the lockup clear of the hero copy on short screens */
+@media (max-height:680px){
+  .brandbar{top:1rem}
+  .brandbar img{width:104px}
 }
