@@ -20,7 +20,11 @@
 
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<!-- reCAPTCHA — PARKED until orchard-rsvp-two.vercel.app is added to the site
+     key's allowed domains at https://www.google.com/recaptcha/admin
+     Until then the widget renders "Invalid domain for site key".
+     TO RE-ENABLE: uncomment this script and the .captcha block in the form. -->
+<!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
 </head>
 <body>
 
@@ -425,7 +429,7 @@
             <div class="select-wrap">
               <select id="00NWj00000ZPEZz" name="00NWj00000ZPEZz" title="Reference">
                 <option value="">&mdash;None&mdash;</option>
-                <option value="Ruggles Black Restaraunt">Ruggles Black Restaraunt</option>
+                <option value="Ruggles Black Restaraunt" selected>Ruggles Black Restaraunt</option>
                 <option value="Other">Other</option>
               </select>
               <svg class="select-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
@@ -449,9 +453,11 @@
           <textarea id="00NWj00000UHuAz" name="00NWj00000UHuAz" rows="3" wrap="soft"></textarea>
         </div>
 
+        <!-- TO RE-ENABLE reCAPTCHA: uncomment this block and the api.js script in <head>.
         <div class="captcha">
           <div class="g-recaptcha" data-sitekey="6LfpApAsAAAAAJGnaVnxcbJVdndYjgJeW_8KPZ_n"></div>
         </div>
+        -->
 
         <button type="submit" name="submit" class="btn btn--submit" id="rsvp-submit">
           <span>Confirm my attendance</span>

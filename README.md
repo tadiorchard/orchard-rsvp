@@ -29,18 +29,31 @@ as the forms on orchardcorp.com.
 | Form field | Salesforce field |
 |---|---|
 | First / last name | `first_name`, `last_name` |
-| Specialty | `00NWj00000UHYgp` |
+| Specialty | `00NWj00000UkWBz` |
 | Cellphone | `mobile` |
 | Email | `email` |
 
-Hidden: `oid` (`00DKc000000Ivmn`), `retURL`, `lead_source`
-(`Dinner RSVP - Dr. Ighoyivwi - Oct 16`), `company` (`[Dinner RSVP]`).
+Also captured: Reference (`00NWj00000ZPEZz`, defaulted to
+`Ruggles Black Restaraunt`), Table for (`00NWj00000ZPQ4n`), City, State and
+Additional Notes (`00NWj00000UHuAz`).
 
-Leads are found in Salesforce by filtering Lead Source on that value.
+Hidden: `oid` (`00DKc000000Ivmn`), `retURL`, `lead_source` (`Web`).
 
-Spam control is a honeypot field only. To add reCAPTCHA, register the
-deployed domain in the Google reCAPTCHA console first, then add the
-`captcha_settings` hidden input and `g-recaptcha` div used on orchardcorp.com.
+Dinner RSVPs are identified in Salesforce by filtering **Reference =
+`Ruggles Black Restaraunt`**.
+
+### reCAPTCHA — currently parked
+
+The widget is commented out in `index.html` (both the `api.js` script in
+`<head>` and the `.captcha` block in the form). The site key is restricted to
+orchardcorp.com domains, so on this host it rendered
+`ERROR for site owner: Invalid domain for site key`.
+
+**To re-enable:** add `orchard-rsvp-two.vercel.app` to the site key's domains
+at https://www.google.com/recaptcha/admin, then uncomment both blocks.
+
+The `captcha_settings` hidden field is deliberately left in place — it carries
+`"fallback":"true"`, so Salesforce keeps accepting leads while the widget is off.
 
 ## Local preview
 
