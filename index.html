@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>You're Invited — An Evening with Dr. Ighoyivwi | Orchard</title>
 <meta name="description" content="Join Orchard for a sponsored dinner with Dr. Ighoyivwi at Ruggles Black, Houston — Friday, October 16 at 7:00 PM. RSVP below.">
@@ -16,6 +17,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 
@@ -176,15 +181,11 @@
         action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DKc000000Ivmn"
         method="POST"
       >
+        <!-- Salesforce Web-to-Lead routing -->
+        <input type="hidden" name="captcha_settings" value='{"keyname":"Google_reCAPTCHA_v2","fallback":"true","orgId":"00DKc000000Ivmn","ts":""}'>
         <input type="hidden" name="oid" value="00DKc000000Ivmn">
         <input type="hidden" name="retURL" value="https://orchard-rsvp-two.vercel.app/thanks.html">
-        <input type="hidden" name="lead_source" value="Dinner RSVP - Dr. Ighoyivwi - Oct 16">
-        <input type="hidden" name="company" value="[Dinner RSVP]">
-
-        <div class="hp" aria-hidden="true">
-          <label for="website">Website</label>
-          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
-        </div>
+        <input type="hidden" id="lead_source" name="lead_source" value="Web">
 
         <div class="grid-2">
           <div class="field">
@@ -198,10 +199,196 @@
         </div>
 
         <div class="field">
-          <label for="00NWj00000UHYgp">Specialty <span class="req">*</span></label>
+          <label for="00NWj00000UkWBz">Specialty <span class="req">*</span></label>
           <div class="select-wrap">
-            <select id="00NWj00000UHYgp" name="00NWj00000UHYgp" required>
+            <select id="00NWj00000UkWBz" name="00NWj00000UkWBz" title="Specialty" required>
               <option value="">Select your specialty</option>
+            <option value="Abdominal Radiology">Abdominal Radiology</option>
+            <option value="Acute Care">Acute Care</option>
+            <option value="Addiction Medicine">Addiction Medicine</option>
+            <option value="Addiction Psychiatry">Addiction Psychiatry</option>
+            <option value="Adolescent Medicine">Adolescent Medicine</option>
+            <option value="Adult">Adult</option>
+            <option value="Adult Reconstructive Orthopedics">Adult Reconstructive Orthopedics</option>
+            <option value="Allergy">Allergy</option>
+            <option value="Allergy/Immunology">Allergy/Immunology</option>
+            <option value="Allergy and Immunology">Allergy and Immunology</option>
+            <option value="Anatomic/Clinical Pathology">Anatomic/Clinical Pathology</option>
+            <option value="Anatomic Pathology">Anatomic Pathology</option>
+            <option value="Anesthesia Assistant">Anesthesia Assistant</option>
+            <option value="Anesthesiology">Anesthesiology</option>
+            <option value="Anesthesiology - Cardiac">Anesthesiology - Cardiac</option>
+            <option value="Audiology">Audiology</option>
+            <option value="Bariatric Surgery">Bariatric Surgery</option>
+            <option value="Bloodbanking/Transfusion Medicine">Bloodbanking/Transfusion Medicine</option>
+            <option value="Breast Radiology">Breast Radiology</option>
+            <option value="Breast Surgery">Breast Surgery</option>
+            <option value="Cardiac Electrophysiology">Cardiac Electrophysiology</option>
+            <option value="Cardiac Surgery">Cardiac Surgery</option>
+            <option value="Cardiology">Cardiology</option>
+            <option value="Cardiothoracic Anesthesiology">Cardiothoracic Anesthesiology</option>
+            <option value="Cardiothoracic Radiology">Cardiothoracic Radiology</option>
+            <option value="Cardiothoracic Surgery">Cardiothoracic Surgery</option>
+            <option value="Cardiovascular Diseases">Cardiovascular Diseases</option>
+            <option value="Cardiovascular Surgery">Cardiovascular Surgery</option>
+            <option value="Certified Anesthesiologist Assistant (CAA)">Certified Anesthesiologist Assistant (CAA)</option>
+            <option value="Child &amp; Adolescent Psychiatry">Child &amp; Adolescent Psychiatry</option>
+            <option value="Child Development">Child Development</option>
+            <option value="Child Neurology">Child Neurology</option>
+            <option value="Clinical Neurophysiology">Clinical Neurophysiology</option>
+            <option value="Clinical Pathology">Clinical Pathology</option>
+            <option value="Colon &amp; Rectal Surgery">Colon &amp; Rectal Surgery</option>
+            <option value="Critical Care Medicine">Critical Care Medicine</option>
+            <option value="Critical Care Surgery">Critical Care Surgery</option>
+            <option value="CRNA">CRNA</option>
+            <option value="Cytopathology">Cytopathology</option>
+            <option value="Dental Hygenist">Dental Hygenist</option>
+            <option value="Dentistry">Dentistry</option>
+            <option value="Dermatology">Dermatology</option>
+            <option value="Dermatopathology">Dermatopathology</option>
+            <option value="Diabetes">Diabetes</option>
+            <option value="Emergency Medicine">Emergency Medicine</option>
+            <option value="Endocrinology">Endocrinology</option>
+            <option value="Endodontist">Endodontist</option>
+            <option value="Family Medicine">Family Medicine</option>
+            <option value="Family Medicine - Obstetrics">Family Medicine - Obstetrics</option>
+            <option value="Foot &amp; Ankle Orthopedics">Foot &amp; Ankle Orthopedics</option>
+            <option value="Forensic Pathology">Forensic Pathology</option>
+            <option value="Forensic Psychiatry">Forensic Psychiatry</option>
+            <option value="Gastroenterology">Gastroenterology</option>
+            <option value="General Practice">General Practice</option>
+            <option value="General Surgery">General Surgery</option>
+            <option value="Geriatric Medicine">Geriatric Medicine</option>
+            <option value="Geriatric Psychiatry">Geriatric Psychiatry</option>
+            <option value="Gerontology/Elder Health">Gerontology/Elder Health</option>
+            <option value="Gynecolgic Oncology">Gynecolgic Oncology</option>
+            <option value="Gynecology">Gynecology</option>
+            <option value="Hand Surgery">Hand Surgery</option>
+            <option value="Head &amp; Neck Surgery">Head &amp; Neck Surgery</option>
+            <option value="Hematology">Hematology</option>
+            <option value="Hematology/Oncology">Hematology/Oncology</option>
+            <option value="Hematopathology">Hematopathology</option>
+            <option value="Hospice &amp; Pallative Medicine">Hospice &amp; Pallative Medicine</option>
+            <option value="Hospice &amp; Palliative Medicine">Hospice &amp; Palliative Medicine</option>
+            <option value="Hospitalist">Hospitalist</option>
+            <option value="Hyperbaric Medicine/Wound Care">Hyperbaric Medicine/Wound Care</option>
+            <option value="IM/Pediatrics (MedPed)">IM/Pediatrics (MedPed)</option>
+            <option value="Immunology">Immunology</option>
+            <option value="Infectious Disease">Infectious Disease</option>
+            <option value="Internal Medicine">Internal Medicine</option>
+            <option value="Interventional Cardiology">Interventional Cardiology</option>
+            <option value="Interventional Neuro Radiology">Interventional Neuro Radiology</option>
+            <option value="Interventional Pain Management">Interventional Pain Management</option>
+            <option value="Interventional Radiology">Interventional Radiology</option>
+            <option value="Kidney Transplant">Kidney Transplant</option>
+            <option value="Maternal &amp; Fetal Medicine">Maternal &amp; Fetal Medicine</option>
+            <option value="Medical Genetics">Medical Genetics</option>
+            <option value="Medical Microbiology">Medical Microbiology</option>
+            <option value="Medical Toxicology">Medical Toxicology</option>
+            <option value="Mens Health">Mens Health</option>
+            <option value="Molecular Genetic Pathology">Molecular Genetic Pathology</option>
+            <option value="Musculoskeletal Radiology">Musculoskeletal Radiology</option>
+            <option value="Neonatal-Perinatal Medicine">Neonatal-Perinatal Medicine</option>
+            <option value="Nephrology">Nephrology</option>
+            <option value="Neurodevelopmental Disabilities">Neurodevelopmental Disabilities</option>
+            <option value="Neurological surgery">Neurological surgery</option>
+            <option value="Neurology">Neurology</option>
+            <option value="Neuropathology">Neuropathology</option>
+            <option value="Neuroradiology">Neuroradiology</option>
+            <option value="Neurotology">Neurotology</option>
+            <option value="Nocturnist">Nocturnist</option>
+            <option value="Nonsurgical/Nonprimary Care">Nonsurgical/Nonprimary Care</option>
+            <option value="Nucelar Radiology">Nucelar Radiology</option>
+            <option value="Nuclear Medicine">Nuclear Medicine</option>
+            <option value="Nurse Midwife">Nurse Midwife</option>
+            <option value="Nurse Practitioner">Nurse Practitioner</option>
+            <option value="Obstetrics and Gynecology">Obstetrics and Gynecology</option>
+            <option value="Occupational Medicine">Occupational Medicine</option>
+            <option value="Occupational Therapist">Occupational Therapist</option>
+            <option value="Occupational Therapy Assistant">Occupational Therapy Assistant</option>
+            <option value="Oncology">Oncology</option>
+            <option value="Ophthalmology">Ophthalmology</option>
+            <option value="Optometry">Optometry</option>
+            <option value="Oral &amp; Maxillofacial Surgery">Oral &amp; Maxillofacial Surgery</option>
+            <option value="Oral Surgery">Oral Surgery</option>
+            <option value="Orthodontist">Orthodontist</option>
+            <option value="Orthopedic Sports Medicine">Orthopedic Sports Medicine</option>
+            <option value="Orthopedic Surgery">Orthopedic Surgery</option>
+            <option value="Orthopedic Trauma Surgery">Orthopedic Trauma Surgery</option>
+            <option value="Otolaryngology">Otolaryngology</option>
+            <option value="Pain Management">Pain Management</option>
+            <option value="Pathology">Pathology</option>
+            <option value="Pediatric Allergy and Immunology">Pediatric Allergy and Immunology</option>
+            <option value="Pediatric Anesthesiology">Pediatric Anesthesiology</option>
+            <option value="Pediatric Cardiology">Pediatric Cardiology</option>
+            <option value="Pediatric Cardiothoracic Surgery">Pediatric Cardiothoracic Surgery</option>
+            <option value="Pediatric Certified Dentist">Pediatric Certified Dentist</option>
+            <option value="Pediatric Critical Care Medicine">Pediatric Critical Care Medicine</option>
+            <option value="Pediatric Dentistry">Pediatric Dentistry</option>
+            <option value="Pediatric Emergency Medicine">Pediatric Emergency Medicine</option>
+            <option value="Pediatric Endocrinology">Pediatric Endocrinology</option>
+            <option value="Pediatric Gastroenterology">Pediatric Gastroenterology</option>
+            <option value="Pediatric Genetics">Pediatric Genetics</option>
+            <option value="Pediatric Hematology/Oncology">Pediatric Hematology/Oncology</option>
+            <option value="Pediatric Hospitalist">Pediatric Hospitalist</option>
+            <option value="Pediatric Hospitalist-Internal Medicine">Pediatric Hospitalist-Internal Medicine</option>
+            <option value="Pediatric Infectious Disease">Pediatric Infectious Disease</option>
+            <option value="Pediatric Internal Medicine">Pediatric Internal Medicine</option>
+            <option value="Pediatric Neonatal Medicine">Pediatric Neonatal Medicine</option>
+            <option value="Pediatric Nephrology">Pediatric Nephrology</option>
+            <option value="Pediatric Neurological Surgery">Pediatric Neurological Surgery</option>
+            <option value="Pediatric Neurology">Pediatric Neurology</option>
+            <option value="Pediatric Oncology">Pediatric Oncology</option>
+            <option value="Pediatric Ophthalmology">Pediatric Ophthalmology</option>
+            <option value="Pediatric Orthopedic Surgery">Pediatric Orthopedic Surgery</option>
+            <option value="Pediatric Otolaryngology">Pediatric Otolaryngology</option>
+            <option value="Pediatric Pathology">Pediatric Pathology</option>
+            <option value="Pediatric Pulmonology">Pediatric Pulmonology</option>
+            <option value="Pediatric Radiology">Pediatric Radiology</option>
+            <option value="Pediatric Rehabilitation Medicine">Pediatric Rehabilitation Medicine</option>
+            <option value="Pediatric Rheumatology">Pediatric Rheumatology</option>
+            <option value="Pediatrics">Pediatrics</option>
+            <option value="Pediatrics &amp; Behavioral">Pediatrics &amp; Behavioral</option>
+            <option value="Pediatrics Orthopedics">Pediatrics Orthopedics</option>
+            <option value="Pediatric Surgery">Pediatric Surgery</option>
+            <option value="Pediatric Urology">Pediatric Urology</option>
+            <option value="Perfusionist">Perfusionist</option>
+            <option value="Periodontist">Periodontist</option>
+            <option value="Physical Medicine and Rehabilitation">Physical Medicine and Rehabilitation</option>
+            <option value="Plastic Surgery">Plastic Surgery</option>
+            <option value="Podiatry">Podiatry</option>
+            <option value="Preventive Medicine">Preventive Medicine</option>
+            <option value="Primary Care">Primary Care</option>
+            <option value="Psychiatry">Psychiatry</option>
+            <option value="Psychology">Psychology</option>
+            <option value="Pulmonary Critical Care Medicine">Pulmonary Critical Care Medicine</option>
+            <option value="Pulmonary Disease">Pulmonary Disease</option>
+            <option value="Pulmonary Sleep Medicine">Pulmonary Sleep Medicine</option>
+            <option value="Radiation Oncology">Radiation Oncology</option>
+            <option value="Radiation Physics">Radiation Physics</option>
+            <option value="Radiology">Radiology</option>
+            <option value="Reproductive Endorcrinology">Reproductive Endorcrinology</option>
+            <option value="Rheumatology">Rheumatology</option>
+            <option value="Selective Pathology">Selective Pathology</option>
+            <option value="Sleep Medicine">Sleep Medicine</option>
+            <option value="Social Work">Social Work</option>
+            <option value="Speech Language Pathology">Speech Language Pathology</option>
+            <option value="Spine Surgery">Spine Surgery</option>
+            <option value="Sports Medicine">Sports Medicine</option>
+            <option value="Surgery">Surgery</option>
+            <option value="Surgical Oncology">Surgical Oncology</option>
+            <option value="Thoracic Surgery">Thoracic Surgery</option>
+            <option value="Transplant Surgery">Transplant Surgery</option>
+            <option value="Trauma">Trauma</option>
+            <option value="Trauma Surgery">Trauma Surgery</option>
+            <option value="Urgent Care">Urgent Care</option>
+            <option value="Urology">Urology</option>
+            <option value="Vascular/Interventional Radiology">Vascular/Interventional Radiology</option>
+            <option value="Vascular Medicine">Vascular Medicine</option>
+            <option value="Vascular Neurology">Vascular Neurology</option>
+            <option value="Vascular Surgery">Vascular Surgery</option>
+            <option value="Womens Health">Womens Health</option>
+            <option value="Wound Care">Wound Care</option>
             </select>
             <svg class="select-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </div>
@@ -218,7 +405,55 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn--submit" id="rsvp-submit">
+        <div class="grid-2">
+          <div class="field">
+            <label for="00NWj00000ZPQ4n">Table for <span class="req">*</span></label>
+            <div class="select-wrap">
+              <select id="00NWj00000ZPQ4n" name="00NWj00000ZPQ4n" title="Table for" required>
+                <option value="">How many seats?</option>
+                <option value="1">1 &mdash; just me</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <svg class="select-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="field">
+            <label for="00NWj00000ZPEZz">Reference</label>
+            <div class="select-wrap">
+              <select id="00NWj00000ZPEZz" name="00NWj00000ZPEZz" title="Reference">
+                <option value="">&mdash;None&mdash;</option>
+                <option value="Ruggles Black Restaraunt">Ruggles Black Restaraunt</option>
+                <option value="Other">Other</option>
+              </select>
+              <svg class="select-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label for="city">City</label>
+            <input id="city" name="city" type="text" maxlength="40" autocomplete="address-level2" placeholder="Houston">
+          </div>
+          <div class="field">
+            <label for="state">State</label>
+            <input id="state" name="state" type="text" maxlength="20" autocomplete="address-level1" placeholder="TX">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="00NWj00000UHuAz">Additional notes <span class="opt">Dietary needs, guest names, anything else</span></label>
+          <textarea id="00NWj00000UHuAz" name="00NWj00000UHuAz" rows="3" wrap="soft"></textarea>
+        </div>
+
+        <div class="captcha">
+          <div class="g-recaptcha" data-sitekey="6LfpApAsAAAAAJGnaVnxcbJVdndYjgJeW_8KPZ_n"></div>
+        </div>
+
+        <button type="submit" name="submit" class="btn btn--submit" id="rsvp-submit">
           <span>Confirm my attendance</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>

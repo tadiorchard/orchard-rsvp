@@ -376,3 +376,39 @@ img{max-width:100%;display:block}
   .reveal{opacity:1;transform:none}
   .hero__media img{animation:none}
 }
+
+/* ───────────  Added fields: textarea, optional hint, captcha  ─────────── */
+.field .opt{
+  display:inline;margin-left:.5rem;
+  font-size:.6rem;letter-spacing:.08em;text-transform:none;
+  color:var(--muted);font-weight:300;font-style:italic;
+}
+
+.field textarea{
+  width:100%;
+  padding:.92rem 1rem;
+  font-family:inherit;font-size:.98rem;font-weight:300;line-height:1.6;
+  color:var(--cream);
+  background:rgba(11,16,20,.6);
+  border:1px solid var(--line);
+  border-radius:2px;
+  resize:vertical;min-height:92px;
+  transition:border-color .3s var(--ease),box-shadow .3s var(--ease),background .3s var(--ease);
+}
+.field textarea::placeholder{color:#5D6B75}
+.field textarea:focus{
+  outline:none;border-color:var(--gold);
+  background:rgba(11,16,20,.85);
+  box-shadow:0 0 0 3px rgba(201,169,97,.14);
+}
+
+.captcha{
+  display:flex;justify-content:center;
+  margin:.4rem 0 1.5rem;
+  /* reCAPTCHA renders a fixed 304px iframe — let it shrink on small screens */
+  overflow:hidden;
+}
+.captcha .g-recaptcha{transform-origin:center}
+@media (max-width:360px){
+  .captcha .g-recaptcha{transform:scale(.88)}
+}
