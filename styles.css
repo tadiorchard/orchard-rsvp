@@ -431,7 +431,7 @@ img{max-width:100%;display:block}
   animation:brandIn 1.2s var(--ease) .25s forwards;
 }
 .brandbar img{
-  width:clamp(112px,13vw,148px);height:auto;
+  width:clamp(128px,14vw,152px);height:auto;
   /* reverse navy → cream for the dark ground */
   filter:brightness(0) invert(1);
   opacity:.9;
