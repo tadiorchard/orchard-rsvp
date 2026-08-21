@@ -42,18 +42,18 @@ Hidden: `oid` (`00DKc000000Ivmn`), `retURL`, `lead_source` (`Web`).
 Dinner RSVPs are identified in Salesforce by filtering **Reference =
 `Ruggles Black Restaraunt`**.
 
-### reCAPTCHA — currently parked
+### reCAPTCHA
 
-The widget is commented out in `index.html` (both the `api.js` script in
-`<head>` and the `.captcha` block in the form). The site key is restricted to
-orchardcorp.com domains, so on this host it rendered
-`ERROR for site owner: Invalid domain for site key`.
+reCAPTCHA v2 is active on the form, using the same site key as the
+orchardcorp.com forms.
 
-**To re-enable:** add `orchard-rsvp-two.vercel.app` to the site key's domains
-at https://www.google.com/recaptcha/admin, then uncomment both blocks.
+The key is domain-restricted: if the deployed host is not listed at
+https://www.google.com/recaptcha/admin the widget renders
+`ERROR for site owner: Invalid domain for site key`. Add any new domain
+there before pointing it at this page.
 
-The `captcha_settings` hidden field is deliberately left in place — it carries
-`"fallback":"true"`, so Salesforce keeps accepting leads while the widget is off.
+The `captcha_settings` hidden field carries `"fallback":"true"`, so
+Salesforce still accepts leads if the captcha cannot be completed.
 
 ## Local preview
 
