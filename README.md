@@ -1,7 +1,8 @@
 # orchard-rsvp
 
-One-page invitation and RSVP capture for **Dr. Ighoyivwi's sponsored dinner**,
-hosted by Orchard.
+One-page invitation and RSVP capture for a **sponsored dinner** hosted by
+Orchard. (The host physician's name is intentionally omitted from the page
+for now.)
 
 **Live:** https://orchard-rsvp-two.vercel.app
 
