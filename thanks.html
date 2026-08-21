@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thank you — We've saved your seat | Orchard</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .thanks{
+    min-height:100svh;display:grid;place-items:center;text-align:center;
+    position:relative;overflow:hidden;padding:4rem 0;
+  }
+  .thanks__media{position:absolute;inset:0;z-index:0}
+  .thanks__media img{width:100%;height:100%;object-fit:cover;transform:scale(1.08)}
+  .thanks__scrim{
+    position:absolute;inset:0;z-index:1;
+    background:radial-gradient(120% 90% at 50% 40%,rgba(11,16,20,.62),rgba(11,16,20,.96));
+  }
+  .thanks__inner{position:relative;z-index:2;max-width:640px;padding-inline:1.5rem}
+  .seal{
+    width:76px;height:76px;margin:0 auto 2rem;border-radius:50%;
+    display:grid;place-items:center;
+    border:1px solid rgba(201,169,97,.5);color:var(--gold);
+    animation:pop .9s cubic-bezier(.22,.8,.28,1) both;
+  }
+  .seal svg{width:32px;height:32px;stroke-linecap:round;stroke-linejoin:round}
+  .seal svg path{
+    stroke-dasharray:32;stroke-dashoffset:32;
+    animation:draw .8s cubic-bezier(.22,.8,.28,1) .45s forwards;
+  }
+  @keyframes pop{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:none}}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  .thanks h1{
+    margin:0 0 1.2rem;font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;
+    font-size:clamp(2.4rem,8vw,4.2rem);line-height:1.05;
+  }
+  .thanks p{margin:0 auto 1rem;max-width:44ch;color:var(--cream-dim)}
+  .thanks .small{color:var(--muted);font-size:.9rem}
+  .thanks .recap{
+    margin:2.4rem auto 2.6rem;padding:1.4rem 1.6rem;max-width:420px;
+    border:1px solid var(--line);border-radius:3px;background:rgba(246,241,232,.03);
+  }
+  .thanks .recap div{display:flex;justify-content:space-between;gap:1rem;padding:.4rem 0}
+  .thanks .recap span:first-child{
+    font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)
+  }
+  .thanks .recap span:last-child{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.1rem}
+</style>
+</head>
+<body>
+<section class="thanks">
+  <div class="thanks__media"><img src="src/assets/venue-patio.webp" alt="" aria-hidden="true"></div>
+  <div class="thanks__scrim"></div>
+  <div class="thanks__inner">
+    <div class="seal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12.5l5.5 5.5L20 7"/></svg>
+    </div>
+    <p class="eyebrow">RSVP received</p>
+    <h1>We&rsquo;ve saved you a seat</h1>
+    <p>
+      Thank you for confirming. A member of the Orchard team will follow up
+      shortly with final details for the evening.
+    </p>
+
+    <div class="recap">
+      <div><span>When</span><span>Fri, Oct 16 &middot; 7:00 PM</span></div>
+      <div><span>Where</span><span>Ruggles Black</span></div>
+      <div><span>Address</span><span>2245 W Alabama St</span></div>
+    </div>
+
+    <a class="btn btn--primary" href="https://maps.google.com/?q=Ruggles+Black,+2245+W+Alabama+St,+Houston,+TX+77098" target="_blank" rel="noopener noreferrer">Get directions</a>
+
+    <p class="small" style="margin-top:2rem">
+      Need to change your reply? Email
+      <a href="mailto:info@orchardcorp.com" style="color:var(--gold)">info@orchardcorp.com</a>
+    </p>
+  </div>
+</section>
+</body>
+</html>
