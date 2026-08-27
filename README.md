@@ -1,8 +1,9 @@
 # orchard-rsvp
 
-One-page invitation and RSVP capture for a **sponsored dinner** hosted by
-Orchard. (The host physician's name is intentionally omitted from the page
-for now.)
+One-page invitation and RSVP capture for a dinner **sponsored by Orchard** —
+an evening for physicians and healthcare providers to meet over dinner and
+learn more about Orchard and locum tenens. (The sponsoring physician's name is
+intentionally omitted from the page for now.)
 
 **Live:** https://orchard-rsvp-two.vercel.app
 
@@ -37,6 +38,10 @@ as the forms on orchardcorp.com.
 Also captured: Reference (`00NWj00000ZPEZz`, defaulted to
 `Ruggles Black Restaraunt`), Table for (`00NWj00000ZPQ4n`), City, State and
 Additional Notes (`00NWj00000UHuAz`).
+
+**Table for is capped at 2** (guest + one). The Salesforce picklist still
+accepts 1–5; the invite only offers 1 and 2, so raising the cap is a matter of
+adding the options back in `index.html`.
 
 Hidden: `oid` (`00DKc000000Ivmn`), `retURL`, `lead_source` (`Web`).
 
