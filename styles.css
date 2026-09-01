@@ -465,3 +465,6 @@ img{max-width:100%;display:block}
   .brandbar{top:1rem}
   .brandbar img{width:104px}
 }
+
+/* Second line inside a card note sits closer to the first */
+.card__note--tight{margin-top:.55rem;color:var(--cream-dim);opacity:.75}
